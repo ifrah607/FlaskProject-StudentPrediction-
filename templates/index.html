@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exam Score Predictor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Exam Score Predictor</h1>
+        <form action="/predict" method="POST">
+            <label for="Hours_Studied">Hours Studied:</label>
+            <input type="number" name="Hours_Studied" required><br>
+
+            <label for="Attendance">Attendance (%):</label>
+            <input type="number" name="Attendance" required><br>
+
+            <label for="Parental_Involvement">Parental Involvement:</label>
+            <select name="Parental_Involvement" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+
+            <label for="Access_to_Resources">Access to Resources:</label>
+            <select name="Access_to_Resources" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+
+            <label for="Extracurricular_Activities">Extracurricular Activities:</label>
+            <select name="Extracurricular_Activities" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select><br>
+
+            <label for="Sleep_Hours">Sleep Hours:</label>
+            <input type="number" name="Sleep_Hours" required><br>
+
+            <label for="Previous_Scores">Previous Scores:</label>
+            <input type="number" name="Previous_Scores" required><br>
+
+            <label for="Motivation_Level">Motivation Level:</label>
+            <select name="Motivation_Level" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+
+            <label for="Internet_Access">Internet Access:</label>
+            <select name="Internet_Access" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select><br>
+
+            <label for="Tutoring_Sessions">Tutoring Sessions:</label>
+            <input type="number" name="Tutoring_Sessions" required><br>
+
+            <label for="Family_Income">Family Income:</label>
+            <select name="Family_Income" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+
+            <label for="Teacher_Quality">Teacher Quality:</label>
+            <select name="Teacher_Quality" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select><br>
+
+            <label for="School_Type">School Type:</label>
+            <select name="School_Type" required>
+                <option value="Public">Public</option>
+                <option value="Private">Private</option>
+            </select><br>
+
+            <label for="Peer_Influence">Peer Influence:</label>
+            <select name="Peer_Influence" required>
+                <option value="Negative">Negative</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Positive">Positive</option>
+            </select><br>
+
+            <label for="Physical_Activity">Physical Activity (Hours per week):</label>
+            <input type="number" name="Physical_Activity" required><br>
+
+            <label for="Learning_Disabilities">Learning Disabilities:</label>
+            <select name="Learning_Disabilities" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select><br>
+
+            <label for="Parental_Education_Level">Parental Education Level:</label>
+            <select name="Parental_Education_Level" required>
+                <option value="High School">High School</option>
+                <option value="College">College</option>
+                <option value="Postgraduate">Postgraduate</option>
+            </select><br>
+
+            <label for="Distance_from_Home">Distance from Home:</label>
+            <select name="Distance_from_Home" required>
+                <option value="Near">Near</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Far">Far</option>
+            </select><br>
+
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+
+            <button type="submit">Predict Score</button>
+        </form>
+
+        <h2>{{ prediction_text }}</h2>
+    </div>
+
+</body>
+</html>
